@@ -67,7 +67,7 @@ let rev=a.reverse()
 console.log(rev)
 
 console.log("-----------")
-//concat
+//concat()
 let x=[11,22,33,44]
 let y=['a','b','c']
 
