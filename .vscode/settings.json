@@ -1,0 +1,9 @@
+{
+  "typescript.tsserver.watchOptions": "vscode",
+  "google.gemini.enable": false,
+  "google.gemini.codeCompletion.enable": false,
+  "google.gemini.inlineCompletion.enable": false,
+  "editor.inlineSuggest.enabled": false,
+  //"editor.quickSuggestions": false,
+  "editor.suggestOnTriggerCharacters": false
+}
