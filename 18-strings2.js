@@ -103,10 +103,10 @@ console.log("---------------")
 
 let str1 = "Dipanshu NITIN ChaWde"
 
-let s1 = str1.toLocaleUpperCase()
+let s1 = str1.toUpperCase()
 console.log(s1)
 
-console.log(str1.toLocaleLowerCase())
+console.log(str1.toLowerCase())
  
 //includes  -- case sensetive
 let s2 = str1.includes("dip")
