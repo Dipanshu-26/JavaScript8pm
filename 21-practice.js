@@ -115,6 +115,7 @@ else{
 // console.log('-------------------------------------------------')
 // Write a function that takes an array of strings and returns a new array with only the strings that have a length greater than 5.
 
+
 // console.log('-------------------------------------------------')
 // Write a function to find the maximum number in an array of numbers.
 
