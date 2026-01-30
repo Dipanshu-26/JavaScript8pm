@@ -72,3 +72,11 @@ calculator(20,2) //arguments
 calculator(50, 500)
 
 calculator(700, 3)
+
+
+function average(x,y,z){
+  a=(x+y+z)/3
+  return a
+}
+
+res = average(10,20,30)
