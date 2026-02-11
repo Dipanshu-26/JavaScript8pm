@@ -72,3 +72,64 @@ ob.addition(1,2,3,4)
 ob.addition(1)
 
 //------------------------------------------------------------------------------
+
+//Method Overriding -- Same method name, same signature, but in child class with inheritance.
+
+// class worldBank{
+//     loan(){
+//         console.log("world bank loan method")
+//     }
+//     save(){
+//         console.log("world bank save method")
+//     }
+// }
+
+// class SBI extends worldBank{
+//     loan(){
+//         console.log("SBIbank loan method")
+//     }
+//     save(){
+//         console.log("SBI bank save method")
+//     }
+// }
+
+// let wb = new worldBank()
+// wb.loan()
+// wb.save()
+
+// let sb = new SBI()
+// sb.loan()
+// sb.save()
+
+//--------------------------------------------------------
+
+class worldBank{
+    loanInterestRate(){
+        return 10
+    }
+    saveInterestRate(){
+        return 5
+    }
+}
+
+
+class SBI extends worldBank{
+    loanInterestRate(){
+        //return 9
+        return super.loanInterestRate() + 2
+    }
+    saveInterestRate(){
+        //return 8
+        return super.loanInterestRate() - 2
+    }
+}
+
+let sb = new SBI()
+let wb = new worldBank()
+
+let ans = sb.loanInterestRate()
+console.log(ans)
+console.log(sb.saveInterestRate())
+
+console.log(wb.loanInterestRate())
+console.log(wb.saveInterestRate())
