@@ -1,0 +1,38 @@
+
+✅ Primitive Data Types : Primitive values store actual data directly.
+
+They are: simple, immutable, compared by value, stored in stack
+Primitive types in JS: String, Number, Boolean, Undefined, Null, BigInt, Symbol
+
+✅ Non-Primitive (Reference) Types : Non-primitive values store reference (address) to data.
+They are: complex, mutable, compared by reference, stored in heap
+
+Non-primitive types: Object, Array ,Function ,Date, Map, Set
+
+--Explanation -----------------------------------------------------------------------------
+10 === 10 // true
+10 == 10 // true
+
+[1,2] === [1,2] // false
+[1,2] == [1,2] // false
+
+console.log([11,22,33] == [11,22,33])    //false
+let a=[11,22,33]
+let b=[11,22,33]
+console.log(a==b)
+// a → address 300
+// b → address 400
+console.log(a[1] == b[1])
+console.log(JSON.stringify(a) === JSON.stringify(b))
+//“If you need structural equality, convert to string.”
+console.log({fn : "dip"} == {fn : "dip"} )
+
+a={fn : "dip"}
+b={fn : "dip"}
+console.log(a==b)
+
+console.log(a.fn == b.fn)
+console.log(JSON.stringify(a) === JSON.stringify(b))
+console.log(JSON.stringify([11,22,33]) == JSON.stringify([11,22,33])) 
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
