@@ -77,7 +77,74 @@ console.log(x==c)
 console.log(JSON.stringify(x) == JSON.stringify(y))
 
 // ----------------------------------------------------------------------
+console.log("----------------------------")
+let map2 = new Map([
+    [1,'admin'],
+    [2,'manager'],
+    [3,'customer']
+])
 
+console.log(map2)
+console.log(map2.size)
+
+// retrive
+console.log(map2.get(3))
+console.log(map2.get('admin')) //undefined coz map values retrived with key 
+let q1=map2.get(2)
+console.log(q1)
+
+//add
+let q2 = map2.set(4,'trainee')
+console.log(map2)
+console.log(q2)
+
+let q3 = map2.set(5,'project leader')
+console.log(map2)
+console.log(q3)
+
+//update
+map2.set(5,'leader')
+console.log(map2)
+
+//delete
+let q4=map2.delete(5)
+console.log(map2)
+console.log(q4)
+
+//if any key exists or not
+
+console.log(map2.has(3))
+
+let q5 = map2.has(6)
+console.log(q5)
+
+console.log(map2.has("admin"))  //false it only finds key not value
+
+//looping
+
+for(let ky of map2.keys()){
+    console.log(ky)
+}
+
+for(let val of map2.values()){
+    console.log(val)
+}
+
+for(let ent of map2.entries()){
+    console.log(ent)
+}
+
+for(let [key, val] of map2){
+    console.log(key, val)
+}
+
+map2.forEach(function(v,k){
+    console.log(k,v)
+})
+
+
+
+//----------------------------------------------------------------------
 // JavaScript Data Types Classification
 // Primitive Data Types -- Primitive types store single, immutable values and are stored by value.
 
