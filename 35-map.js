@@ -142,8 +142,23 @@ map2.forEach(function(v,k){
     console.log(k,v)
 })
 
+//------more example-------------
+let map4 = new Map()
 
+let response =[
+  {id :1,name : "dip1" },
+  {id :2,name : "dip2" },
+  {id :3,name : "dip3" },
+  {id :4,name : "dip4" },
+  {id :5,name : "dip5" },
+  {id :6,name : "dip6" },
+  ]
+  
+response.forEach(function(el,ind){
+    map4.set(el.id,el.name)
+})
 
+console.log(map4)
 //----------------------------------------------------------------------
 // JavaScript Data Types Classification
 // Primitive Data Types -- Primitive types store single, immutable values and are stored by value.
