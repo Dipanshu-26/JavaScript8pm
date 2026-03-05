@@ -71,3 +71,5 @@ info.displayName()
 // Global object = window
 // In vs code:
 // your var variables are NOT attached to global.
+
+
