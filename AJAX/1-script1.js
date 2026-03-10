@@ -109,19 +109,61 @@
 //then and catch
 //catch is used when we need to write generic reject 
 
+// let pro = new Promise(function(resolve,reject){
+//     let a=100
+//     let b=20
+//     if(a>b){
+//         resolve([11,22,33,44])
+//     }
+//     else{
+//         reject([1,2,3,4])
+//     }
+// })
+
+// pro.then(function(str){
+//     console.log(str)
+// }).catch(function(str){
+//     console.log(str)
+// })
+
+//------------------------------------------------------------------------------
+
+// let pro = new Promise(function(resolve,reject){
+//     let nm = "adipanshu"
+//     if(nm.startsWith('d')){
+//         resolve("starts with d")
+//     }
+//     else {
+//         reject("does not start with d")
+//     }
+// })
+
+// //consume
+// //pro.then(function_resolve(ret_str){......},function_reject(ret_str){.....})
+// pro.then(function(str){
+//     console.log(str)
+// }).catch(function(str){
+//     console.log(str)
+// })
+//------------------------------------------------------------------------------
+
 let pro = new Promise(function(resolve,reject){
     let a=100
-    let b=20
+    let b=200
     if(a>b){
-        resolve([11,22,33,44])
+        resolve("hi")
     }
     else{
-        reject([1,2,3,4])
+        reject("bye")
     }
 })
 
 pro.then(function(str){
+   return `${str} !!! Dipanshu`
+}).then(function(str){
     console.log(str)
 }).catch(function(str){
     console.log(str)
+}).finally(function(){
+    console.log('I will always get executed')
 })
