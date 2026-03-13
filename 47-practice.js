@@ -66,24 +66,7 @@ let userData = {
   }
 }
 
-
-let loadButton =document.querySelector('button')
-
-loadButton.addEventListener('click',function(){
-    getUserInfo()
-})
-
-function getUserInfo(){
-    userData.data.forEach(function(el){
-        document.writeln(`<h1> ${el.id} </h1>`)
-        document.writeln(`<h1> ${el.first_name}  ${el.last_name} </h1>`)
-        document.writeln(`<h1> ${el.email} </h1>`)
-        document.writeln(`<img src= ${el.avatar}>`)
-    })
-}
-
-
-
-
-
-
+//console.log(userData.data)
+console.log(userData.data[0])
+console.log(userData.data[0].first_name)
+console.log(userData.data[1].first_name)
