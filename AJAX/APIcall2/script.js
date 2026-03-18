@@ -1,3 +1,4 @@
+//list of user of given page
 function getUserInfo(pageno) {
     return fetch(`https://reqres.in/api/users?page=${pageno}`, {
         method: 'GET',
@@ -16,7 +17,7 @@ function getUserInfo(pageno) {
 //getUserInfo(2)
 
 //------------------------------------------------------------------
-
+//single user info of given id
 function getSingleUser(userId) {
     return fetch(`https://reqres.in/api/users/${userId}`, {
         method: "GET",
@@ -39,10 +40,6 @@ function renderHTML(el) {
     document.writeln(`<h1>${el.email}</h1> <br>`)
     document.writeln(`<img src= ${el.avatar}>`)
 }
-
-
-
-
 
 
 //-------------------------------------------------------------------------------------
