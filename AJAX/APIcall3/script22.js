@@ -76,22 +76,71 @@ async function loadDashboard2() {
   }
 
 }
-loadDashboard2()
+//loadDashboard2()
 
 //.race .allsettle
+//promise.race()
+//it will race betweenthe promises and returns first executed promise
 
+async function loadFastestUser() {
+    const response = await Promise.race([
+         fetch('https://reqres.in/api/users?page=1', {
+                method: 'GET',
+                headers: {
+                    "x-api-key": "reqres_7719223fd6664035a09558d2a98b01d7"
+                }
+            }),
+            
 
+            fetch('https://reqres.in/api/users?page=2', {
+                method: 'GET',
+                headers: {
+                    "x-api-key": "reqres_7719223fd6664035a09558d2a98b01d7"
+                }
+            }),
 
-
-
-
-
-
-
+            fetch('https://reqres.in/api/users?page=3', {
+                method: 'GET',
+                headers: {
+                    "x-api-key": "reqres_7719223fd6664035a09558d2a98b01d7"
+                }
+            })
+    ])
+    const apiData = await response.json()
+    console.log(apiData.data)
+    
+}
+//loadFastestUser()
 
 //promise.allsettled()
 //it will execute all and return whatever is result in array..
 //if resolve return output ..if reject return reason
 
-//promise.race()
-//it will race betweenthe promises and returns first executed promise
+async function loadwebpage() {
+    const response = await Promise.allSettled([
+         fetch('https://reqres.in/api/users?page=1', {
+                method: 'GET',
+                headers: {
+                    "x-api-key": "reqres_7719223fd6664035a09558d2a98b01d7"
+                }
+            }).then(res => res.json()),
+            
+
+            fetch('https://reqres.in/api/users?page=2', {
+                method: 'GET',
+                headers: {
+                    "x-api-key": "reqres_7719223fd6664035a09558d2a98b01d7"
+                }
+            }).then(res => res.json()),
+
+            fetch('https://wrong-url', {
+                method: 'GET',
+                headers: {
+                    "x-api-key": "reqres_7719223fd6664035a09558d2a98b01d7"
+                }
+            }).then(res => res.json())
+    ])
+    console.log(response)
+    
+}
+loadwebpage()
