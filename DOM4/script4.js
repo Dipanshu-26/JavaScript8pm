@@ -23,3 +23,11 @@ buttonName.addEventListener('click',function(){
 
 //  <h2 id = "head3">What is your Name?</h2>
 //     <button id = "button3">Place</button>
+
+let headThree = document.querySelector('#head3') 
+let buttonPlace = document.querySelector("#button3")
+
+buttonPlace.addEventListener('click',function(){
+    headThree.textContent = "Rome"
+    headThree.style.color = "blue"
+})
