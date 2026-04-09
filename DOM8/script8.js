@@ -28,3 +28,34 @@ for(let i=0;i<byClassNameAll.length;i++){
     byClassNameAll[i].style.color="red"
     }
 }
+
+let htmlCollectionFr = document.getElementsByClassName('fr')
+console.log(htmlCollectionFr)
+
+//program 3
+let para1 = document.querySelector('p')
+console.log(para1)
+
+let para2 = document.querySelectorAll('p')
+console.log(para2)
+
+let para3 = document.getElementsByTagName('p')
+console.log(para3)
+
+//program 4
+let attr1 = document.querySelector('[name = "para"]')
+console.log(attr1)
+
+let attr2 = document.querySelectorAll('[name = "para"]')
+console.log(attr2)
+
+let attr3 = document.getElementsByName('para')
+console.log(attr3)
+
+
+
+
+
+
+
+
